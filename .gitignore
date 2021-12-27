@@ -71,6 +71,7 @@ wp-content/*
 !wp-content/mu-plugins/
 !wp-content/plugins/
 !wp-content/themes/
+!gatsby-template/
  
 # ADVANCED OPTION (disabled by default)
 # ignore everything in the "plugins" directory,
