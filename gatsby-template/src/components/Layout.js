@@ -1,6 +1,8 @@
 import React from "react"
 import { createGlobalStyle } from "styled-components"
 
+import "../styles/styles.scss"
+
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
@@ -12,12 +14,12 @@ const GlobalStyles = createGlobalStyle`
 `
 
 const Layout = ({ children }) => {
-    return (
-      <>
-        <GlobalStyles />
-        {children}
-      </>
-    )
-  }
+  return (
+    <>
+      <GlobalStyles />
+      {children}
+    </>
+  );
+}
   
-  export default Layout
+export default Layout;

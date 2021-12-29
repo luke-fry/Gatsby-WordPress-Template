@@ -14,6 +14,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -27,25 +28,17 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-wordpress",
+      resolve: `gatsby-source-wordpress`,
       options: {
-        minimizeDeprecationNotice: true,
-        baseUrl: "gatsby-template.dev.cc",
-        protocol: "http",
-        hostingWPCOM: false,
-        useACF: false,
-        verboseOutput: false,
-        perPage: 100,
-        concurrentRequests: 10,
-        includedRoutes: [
-          "**/categories",
-          "**/posts",
-          "**/pages",
-          "**/media",
-          "**/tags",
-          "**/taxonomies",
-          "**/users"
-        ],
+        url: `http://gatsby-template.dev.cc/graphql`,
+      },
+    },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "WPGraphQL",
+        fieldName: "wpcontent",
+        url: "http://gatsby-template.dev.cc/graphql",
       },
     },
     {

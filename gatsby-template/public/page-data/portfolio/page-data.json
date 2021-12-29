@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-page-js",
+    "path": "/portfolio/",
+    "result": {"pageContext":{"content":"\n<p>[Portfolio]</p>\n","title":"Portfolio","template":{"templateName":"Default"},"slug":"portfolio","isFrontPage":false,"uri":"/portfolio/","status":"publish","date":"28th December 2021","databaseId":10}},
+    "staticQueryHashes": []}
