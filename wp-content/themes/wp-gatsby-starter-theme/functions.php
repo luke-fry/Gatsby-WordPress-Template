@@ -1,8 +1,7 @@
 <?php
 
 function wp_gatsby_starter_theme_scripts() {
-    wp_enqueue_style('style-name', get_stylesheet_uri());
-    // wp_enqueue_script('script-name', get_template_directory_uri() . '/js/example.js', array(), '1.0.0', true );
+    wp_enqueue_style('starter-theme-css', get_stylesheet_uri(), array(), '', 'all');
 }
 add_action( 'wp_enqueue_scripts', 'wp_gatsby_starter_theme_scripts' );
 

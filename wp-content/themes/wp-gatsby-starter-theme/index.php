@@ -6,13 +6,13 @@
  * 
  */
 
-// wp_head();
+wp_head();
 
 ?>
 
 
-<!-- <div class="splash-screen">
+<div class="splash-screen">
     <p>Gatsby - Starter Theme</p>
-</div> -->
+</div>
 
-<?php //wp_footer(); ?>
+<?php wp_footer(); ?>
