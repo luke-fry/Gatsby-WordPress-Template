@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import Layout from '../components/Layout.js';
+import Seo from '../components/Seo.js';
 
 const Index = () => {
-    useEffect()
     return (
         <StaticQuery query={graphql`
             {
@@ -33,12 +33,16 @@ const Index = () => {
                                 }
                             }
                             link
+                            seo {
+                                fullHead
+                            }
                         }
                     }
                 }
             }
         `} render={ props => (
             <Layout>
+                <Seo yoastHead={props.allWpPage.edges[0].node.seo.fullHead}/>
                 <h1>{props.allWpPage.edges[0].node.title}</h1>
                 <div dangerouslySetInnerHTML={{__html: props.allWpPage.edges[0].node.content}} />
             </Layout>

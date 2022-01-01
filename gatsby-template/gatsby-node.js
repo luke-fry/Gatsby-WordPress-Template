@@ -20,6 +20,9 @@ exports.createPages = ({ graphql, actions }) => {
             status
             date(formatString: "Do MMMM YYYY")
             databaseId
+            seo {
+              fullHead
+            }
           }
         }
       }
