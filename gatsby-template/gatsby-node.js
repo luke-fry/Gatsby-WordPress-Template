@@ -10,23 +10,33 @@ exports.createPages = ({ graphql, actions }) => {
         edges {
           node {
             content
-            title
+            date
+            desiredSlug
+            featuredImage {
+              node {
+                sourceUrl
+                title
+                altText
+              }
+            }
+            isFrontPage
+            isPostsPage
+            link
+            slug
+            status
             template {
               templateName
             }
-            slug
-            isFrontPage
+            title
             uri
-            status
-            date(formatString: "Do MMMM YYYY")
-            databaseId
             seo {
               fullHead
             }
+            databaseId
           }
         }
       }
-    }  
+    }   
   `)
   .then(result => {
     if (result.errors) {
